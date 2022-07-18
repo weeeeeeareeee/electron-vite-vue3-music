@@ -2,7 +2,7 @@
   <div class="menuList" v-for="item in menuList" :key="item.id">
     <p class="title">{{ item.name }}</p>
     <div class="list" v-for="menus in item.menus" :key="menus.key">
-      <UstpIcon :name="menus.icon" v-if="menus.icon"></UstpIcon>
+      <CustomIcon :name="menus.icon" v-if="menus.icon"></CustomIcon>
       {{ menus.name }}
     </div>
   </div>
@@ -10,11 +10,11 @@
 
 <script>
 import { onMounted, ref } from "vue";
-import UstpIcon from "../../components/CustomIcon/index.vue";
+import CustomIcon from "../../components/CustomIcon/index.vue";
 let menuList = ref([]);
 export default {
   name: "menuList",
-  components: { UstpIcon },
+  components: { CustomIcon },
   setup() {
     menuList = [
       {

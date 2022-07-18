@@ -2,7 +2,6 @@
   <div class="box">
     <homeHeader></homeHeader>
     <homeAside></homeAside>
-    <router-view></router-view>
   </div>
 </template>
 
