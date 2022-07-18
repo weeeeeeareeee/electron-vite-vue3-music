@@ -5,7 +5,6 @@ import router from "./router/index.js";
 
 const app = createApp(App);
 import * as ElIcons from "@element-plus/icons-vue";
-import { log } from "console";
 
 // 全局注册图标
 for (const iconName in ElIcons) {
@@ -14,7 +13,6 @@ for (const iconName in ElIcons) {
     app.component(iconName, item);
   }
 }
-// 注册路由
 app.use(router);
 
 app.mount("#app").$nextTick(() => {
