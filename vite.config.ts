@@ -24,7 +24,7 @@ export default defineConfig({
     vue(),
     electron({
       main: {
-        entry: "electron/main/index.ts",
+        entry: "electron/main/index.js",
         vite: {
           build: {
             outDir: "dist/electron/main"
@@ -34,7 +34,7 @@ export default defineConfig({
       preload: {
         input: {
           // You can configure multiple preload here
-          index: join(__dirname, "electron/preload/index.ts")
+          index: join(__dirname, "electron/preload/index.js")
         },
         vite: {
           build: {

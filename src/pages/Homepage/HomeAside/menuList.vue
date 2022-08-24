@@ -1,6 +1,7 @@
 <template>
   <div class="menuList" v-for="item in menuList" :key="item.id">
     <p class="title">{{ item.name }}</p>
+    <el-icon name="setting"></el-icon>
     <div class="list" v-for="menus in item.menus" :key="menus.key">
       <CustomIcon :name="menus.icon" v-if="menus.icon"></CustomIcon>
       {{ menus.name }}
@@ -10,7 +11,7 @@
 
 <script>
 import { onMounted, ref } from "vue";
-import CustomIcon from "../../components/CustomIcon/index.vue";
+import CustomIcon from "@/components/CustomIcon/index.vue";
 let menuList = ref([]);
 export default {
   name: "menuList",

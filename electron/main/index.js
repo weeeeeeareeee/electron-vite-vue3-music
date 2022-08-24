@@ -23,7 +23,7 @@ export const ROOT_PATH = {
   public: join(__dirname, app.isPackaged ? "../.." : "../../../public")
 };
 // 申明
-let win: BrowserWindow | null = null;
+let win = null;
 // 预加载
 const preload = join(__dirname, "../preload/index.js");
 // 🚧 Use ['ENV_NAME'] avoid vite:define plugin

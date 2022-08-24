@@ -1,16 +1,25 @@
 <template>
-  <div class="box">
-    <homeHeader></homeHeader>
-    <homeAside></homeAside>
+  <div>
+    <el-button @click="enterChat"></el-button>
   </div>
+  <router-view></router-view>
 </template>
 
 <script>
-import homeHeader from "./view/homeHeader/index.vue";
-import homeAside from "./view/homeAside/index.vue";
+import HomeHeader from './pages/Homepage/HomeHeader/index.vue'
+import HomeAside from './pages/Homepage/HomeAside/index.vue'
+import { useRouter } from 'vue-router'
 export default {
-  components: { homeHeader, homeAside }
-};
+  components: { HomeHeader, HomeAside },
+
+  setup() {
+    const router = useRouter()
+    const enterChat = () => {
+      router.push({ name: 'Chatroom' })
+    }
+    return { enterChat }
+  }
+}
 </script>
 
 <style>

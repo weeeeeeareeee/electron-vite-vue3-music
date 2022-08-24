@@ -1,9 +1,11 @@
-import { createApp, Component } from "vue";
+import { createApp, h } from "vue";
 import App from "./App.vue";
-import router from "./router/index.js";
+import Router from "./router/index.js";
 // import './samples/node-api'
 
-const app = createApp(App);
+const app = createApp({
+  render: () => h(App)
+});
 import * as ElIcons from "@element-plus/icons-vue";
 
 // 全局注册图标
@@ -13,7 +15,8 @@ for (const iconName in ElIcons) {
     app.component(iconName, item);
   }
 }
-app.use(router);
+// 全局注册路由
+app.use(Router);
 
 app.mount("#app").$nextTick(() => {
   postMessage({ payload: "removeLoading" }, "*");
