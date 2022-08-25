@@ -1,5 +1,5 @@
 <template>
-  <el-icon style="height: 100%" :size="size">
+  <el-icon style="height: 100%" :size="size" class="icon">
     <component :is="defaults[iconName]" />
   </el-icon>
 </template>
@@ -24,4 +24,9 @@ export default {
 };
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.icon {
+  vertical-align:middle;
+  margin-right: 10px;
+}
+</style>

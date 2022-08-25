@@ -1,21 +1,19 @@
 <template>
   <div>
-    <el-button @click="enterChat"></el-button>
+    <Homepage></Homepage>
   </div>
-  <router-view></router-view>
 </template>
 
 <script>
-import HomeHeader from './pages/Homepage/HomeHeader/index.vue'
-import HomeAside from './pages/Homepage/HomeAside/index.vue'
-import { useRouter } from 'vue-router'
+import router from './router/index.js'
+import Homepage from './pages/Homepage/index.vue'
+import {getCurrentInstance} from 'vue'
 export default {
-  components: { HomeHeader, HomeAside },
-
-  setup() {
-    const router = useRouter()
+  components:{Homepage},
+  setup() { 
     const enterChat = () => {
-      router.push({ name: 'Chatroom' })
+      console.log(getCurrentInstance());
+      router.push("/")
     }
     return { enterChat }
   }

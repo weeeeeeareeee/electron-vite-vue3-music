@@ -1,7 +1,7 @@
 <template>
-  <div class="box">
+  <div class="header">
     <div class="left">
-      <a href="#"><img src="../../assets/img/logo.ico" alt="" />芜湖云音乐</a>
+      <a href="#"><img src="../../../assets/img/logo.ico" alt="" />芜湖云音乐</a>
     </div>
     <div class="mid">
       <div class="history">
@@ -69,13 +69,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.box {
+.header {
   -webkit-app-region: drag;
   // -webkit-app-region: no-drag;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
   background-color: #ec4141;
   .left {
     -webkit-app-region: no-drag;
