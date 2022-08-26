@@ -1,23 +1,21 @@
-import { createApp, h } from "vue";
-import App from "./App.vue";
-import Router from "./router/index.js";
+import { createApp } from 'vue'
+import App from './App.vue'
+
+import router from './router/index.js'
+
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+
+
 // import './samples/node-api'
+const app = createApp(App)
 
-const app = createApp({
-  render: () => h(App)
-});
-import * as ElIcons from "@element-plus/icons-vue";
-
-// 全局注册图标
-for (const iconName in ElIcons) {
-  if (Reflect.has(ElIcons, iconName)) {
-    const item = ElIcons[iconName];
-    app.component(iconName, item);
-  }
+app.use(router)
+app.use(ElementPlus);
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, component)
 }
-// 全局注册路由
-app.use(Router);
 
-app.mount("#app").$nextTick(() => {
-  postMessage({ payload: "removeLoading" }, "*");
-});
+
+app.mount('#app').$nextTick(() => { postMessage({ payload: 'removeLoading' }, '*') })

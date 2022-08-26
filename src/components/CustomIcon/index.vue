@@ -26,7 +26,8 @@ export default {
 
 <style lang="less" scoped>
 .icon {
-  vertical-align:middle;
+  vertical-align:text-top;
+  line-height: 20px;
   margin-right: 10px;
 }
 </style>

@@ -1,29 +1,26 @@
+
+
 <template>
-  <div>
-    <Homepage></Homepage>
-  </div>
+  <HomePage></HomePage>
 </template>
 
 <script>
-import router from './router/index.js'
-import Homepage from './pages/Homepage/index.vue'
-import {getCurrentInstance} from 'vue'
+import HomePage from './pages/HomePage/index.vue'
 export default {
-  components:{Homepage},
-  setup() { 
-    const enterChat = () => {
-      console.log(getCurrentInstance());
-      router.push("/")
-    }
-    return { enterChat }
+  components: { HomePage },
+  setup() {
+    
   }
 }
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
