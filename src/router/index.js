@@ -1,30 +1,19 @@
-import { createRouter, createWebHashHistory } from "vue-router"
-
-
-const routes = [
-  // {
-  //   path: '/',
-  //   name: 'Home',
-  //   component: () => import('../pages/HomePage/index.vue'),
-  // },
-  {
-    path: '/',
-    name: 'Recommend',
-    component: () => import('../pages/Recommend/index.vue'),
-
-  },
-  {
-    path: '/MusicHall',
-    name: 'MusicHall',
-    component: () => import('../pages/MusicHall/index.vue'),
-
-  },
-
-]
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const router = createRouter({
-  history: createWebHashHistory("/"),
-  routes
+	history: createWebHashHistory('/'),
+	routes: [
+		{
+			path: '/',
+			name: 'Recommend',
+			component: () => import('../pages/Recommend/index.vue'),
+		},
+		{
+			path: '/MusicHall',
+			name: 'MusicHall',
+			component: () => import('../pages/MusicHall/index.vue'),
+		},
+	],
 })
 
 export default router
