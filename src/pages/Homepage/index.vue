@@ -22,11 +22,11 @@ export default {
 .homePage {
 	height: 100%;
 	width: 100%;
-	::v-deep .el-header {
+	:deep .el-header {
 		--el-header-padding: 0;
 		height: 50px;
 	}
-	::v-deep .el-main {
+	:deep .el-main {
 		--el-main-padding: 0;
 	}
 }

@@ -13,7 +13,6 @@ export default {
 		title: String,
 		icon: String,
 	},
-
 	setup() {},
 }
 </script>
