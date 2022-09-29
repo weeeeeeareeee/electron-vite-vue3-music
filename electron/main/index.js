@@ -58,6 +58,9 @@ const createTray = function () {
 	])
 	tray.setToolTip('芜湖云音乐')
 	tray.setContextMenu(contextMenu)
+	tray.on('click', () => {
+		win.show()
+	})
 }
 
 async function createWindow() {
