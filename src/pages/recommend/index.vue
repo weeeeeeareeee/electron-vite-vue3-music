@@ -3,7 +3,7 @@
 		<el-tabs tab-position="top" class="recommendTabs" v-model="tabName">
 			<el-tab-pane label="个性推荐" :lazy="true" name="个性推荐">
 				<PersonRecommend></PersonRecommend>
-				<el-button @click="log('歌单')"></el-button>
+				<el-button @click="log('歌单')">跳转按钮</el-button>
 			</el-tab-pane>
 			<el-tab-pane label="歌单" :lazy="true" name="歌单"> 歌单 </el-tab-pane>
 			<el-tab-pane label="排行榜" :lazy="true"> 排行榜 </el-tab-pane>

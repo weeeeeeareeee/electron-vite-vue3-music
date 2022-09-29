@@ -31,12 +31,15 @@ const preload = join(__dirname, '../preload/index.js')
 const url = process.env.VITE_DEV_SERVER_URL
 const indexHtml = join(ROOT_PATH.dist, 'index.html')
 
+// Menu.buildFromTemplate(template)
+
 async function createWindow() {
 	win = new BrowserWindow({
 		title: 'Main window',
 		icon: join(ROOT_PATH.public, 'favicon.ico'),
 		minWidth: 700,
 		minHeight: 500,
+		frame: false,
 		webPreferences: {
 			preload,
 			// Warning: Enable nodeIntegration and disable contextIsolation is not secure in production
