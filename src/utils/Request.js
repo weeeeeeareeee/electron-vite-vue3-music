@@ -25,7 +25,6 @@ request.interceptors.response.use(
 	(res) => {
 		// 我们一般在这里处理，请求成功后的错误状态码 例如状态码是500，404，403
 		// res 是所有相应的信息
-		console.log(res)
 		return Promise.resolve(res)
 	},
 	(err) => {

@@ -80,7 +80,7 @@ export default {
 	width: 100%;
 	.aside {
 		width: 10vw;
-		min-width: 200px;
+		min-width: 150px;
 		padding-top: 10px;
 		border-right: 1px solid #c3c3c3;
 		ul {

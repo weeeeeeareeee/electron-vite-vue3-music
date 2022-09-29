@@ -1,13 +1,11 @@
 <template>
 	<div class="personRecommend">
 		<!-- banner流 -->
-		<div class="carousel">
-			<el-carousel :interval="400000" type="card" pause-on-hover height="200px">
-				<el-carousel-item v-for="item in bannerData" :key="item">
-					<img :src="item.imageUrl" />
-				</el-carousel-item>
-			</el-carousel>
-		</div>
+		<el-carousel :interval="400000" type="card" pause-on-hover height="15vw" indicator-position="none" :initial-index="1" v-if="bannerData">
+			<el-carousel-item v-for="item in bannerData" :key="item">
+				<img :src="item.imageUrl" />
+			</el-carousel-item>
+		</el-carousel>
 		<CategoryTitle icon="ArrowRight" title="推荐歌单"></CategoryTitle>
 	</div>
 </template>
@@ -32,11 +30,10 @@ export default {
 
 <style lang="less" scoped>
 @import '../../../assets/css/base.css';
-.carousel {
-	:deep .el-carousel__item {
-		img {
-			width: 100%;
-		}
+
+:deep .el-carousel__item {
+	img {
+		width: 100%;
 	}
 }
 </style>
