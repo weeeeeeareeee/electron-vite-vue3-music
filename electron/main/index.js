@@ -67,8 +67,8 @@ async function createWindow() {
 	win = new BrowserWindow({
 		title: 'Main window',
 		icon: join(ROOT_PATH.public, 'favicon.ico'),
-		minWidth: 700,
-		minHeight: 500,
+		minWidth: 1230,
+		minHeight: 800,
 		frame: false,
 		webPreferences: {
 			preload,
@@ -144,10 +144,10 @@ ipcMain.on('windowControl', (event, data) => {
 			win.minimize()
 			break
 		case 2:
-			if (win.isFullScreen()) {
-				win.setFullScreen(false)
+			if (win.isMaximized()) {
+				win.unmaximize()
 			} else {
-				win.setFullScreen(true)
+				win.maximize()
 			}
 			break
 		case 3:

@@ -1,7 +1,7 @@
 <template>
 	<div class="personRecommend">
 		<!-- banner流 -->
-		<el-carousel :interval="400000" type="card" pause-on-hover height="15vw" indicator-position="none" :initial-index="1" v-if="bannerData">
+		<el-carousel :interval="400000" type="card" pause-on-hover indicator-position="none" :initial-index="1" v-if="bannerData">
 			<el-carousel-item v-for="item in bannerData" :key="item">
 				<img :src="item.imageUrl" />
 			</el-carousel-item>
@@ -30,10 +30,15 @@ export default {
 
 <style lang="less" scoped>
 @import '../../../assets/css/base.css';
-
-:deep .el-carousel__item {
-	img {
-		width: 100%;
+:deep .el-carousel__container {
+	height: 200px !important;
+	.el-carousel__item--card {
+		height: 200px !important;
+		width: 540px !important;
+		img {
+			height: 200px !important;
+			width: 540px !important;
+		}
 	}
 }
 </style>
