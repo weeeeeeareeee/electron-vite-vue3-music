@@ -6,7 +6,7 @@
 				<img :src="item.imageUrl" />
 			</el-carousel-item>
 		</el-carousel>
-		<CategoryTitle icon="ArrowRight" title="推荐歌单"></CategoryTitle>
+		<Category icon="ArrowRight" title="推荐歌单" size="20px"></Category>
 	</div>
 </template>
 
